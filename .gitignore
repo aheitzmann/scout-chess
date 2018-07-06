@@ -1,0 +1,6 @@
+.gitattributes
+.vs
+windows/App/bin
+windows/App/obj
+windows/App/AppPackages
+

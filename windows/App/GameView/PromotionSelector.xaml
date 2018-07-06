@@ -1,0 +1,47 @@
+﻿<UserControl
+    x:Class="ScoutChess.GameView.PromotionSelector"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ScoutChess"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Width="600"
+    Height="250"
+    d:DesignHeight="250"
+    d:DesignWidth="600"
+    Loaded="UserControl_Loaded_1">
+
+    <Border Background="{StaticResource ApplicationPageBackgroundThemeBrush}" Opacity="0.8" BorderThickness="4" BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" >
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150" />
+                <RowDefinition Height="100" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <RadioButton x:Name="KnightRadioBtn" Grid.Column="0" GroupName="Pieces" Checked="RadioButton_Checked_1">
+                    <!--<Image Source="ms-appx:///Assets\white_knight.png"></Image>-->
+                </RadioButton>
+                <RadioButton x:Name="BishopRadioBtn" Grid.Column="1" GroupName="Pieces" Checked="RadioButton_Checked_1">
+                    <!--<Image Source="ms-appx:///Assets\white_bishop.png"></Image>-->
+                </RadioButton>
+                <RadioButton x:Name="RookRadioBtn" Grid.Column="2" GroupName="Pieces" Checked="RadioButton_Checked_1">
+                    <!--<Image Source="ms-appx:///Assets\white_rook.png"></Image>-->
+                </RadioButton>
+                <RadioButton x:Name="QueenRadioBtn" Grid.Column="3" GroupName="Pieces" Checked="RadioButton_Checked_1">
+                    <!--<Image Source="ms-appx:///Assets\white_queen.png"></Image>-->
+                </RadioButton>
+            </Grid>
+            <StackPanel Grid.Row="1" Orientation="Horizontal" FlowDirection="RightToLeft">
+                <Button x:Name="PromoteBtn" Margin="20" IsEnabled="False" Click="PromoteBtn_Click_1">Promote</Button>
+                <Button x:Name="CancelBtn" Margin="20" Click="CancelBtn_Click_1">Cancel</Button>
+            </StackPanel>
+        </Grid>
+    </Border>
+</UserControl>
