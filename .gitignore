@@ -4,3 +4,8 @@ windows/App/bin
 windows/App/obj
 windows/App/AppPackages
 
+# Swift files
+.DS_Store
+.build
+Packages
+*.xcodeproj
